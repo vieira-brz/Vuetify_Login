@@ -1,7 +1,7 @@
 <template>
-    <v-app :style="{background: $vuetify.theme.themes.dark.background}" class="about">
+    <v-app :style="{background: $vuetify.theme.themes.dark.background}" class="config">
         <SideBar/>
-        ABOUT
+        CONFIG
     </v-app>
 </template>
 
@@ -9,7 +9,7 @@
 import SideBar from '../components/SideBar.vue'
 
 export default {
-    name: 'About',
+    name: 'Config',
 
     components: {
         SideBar,

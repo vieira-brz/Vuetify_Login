@@ -1,12 +1,7 @@
 <template>
-  <v-app class="home" 
-    :class="{
-      'background': !$vuetify.theme.dark,
-      'dark_background': $vuetify.theme.dark,
-    }
-  ">
+  <v-app :style="{background: $vuetify.theme.themes.dark.background}" class="chat">
     <SideBar/>
-    HOME
+    CHAT
   </v-app>
 </template>
 
@@ -14,7 +9,7 @@
   import SideBar from '../components/SideBar.vue'
 
   export default {
-    name: 'Home',
+    name: 'Chat',
 
     components: {
       SideBar,

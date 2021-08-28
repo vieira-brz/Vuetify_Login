@@ -1,32 +1,38 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+    <v-main>
+      <router-view/>
+    </v-main>
+  </v-app>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+export default {
+  name: 'App',
 
-#nav {
-  padding: 30px;
+  watch: {
+    $route: {
+      immediate: true,
+      handler(to) {
+        document.title = to.meta.title || 'WEBDEV';
+      }
+    },
+  },
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+  mounted() {
+    const theme = localStorage.getItem('dark_theme');
 
-    &.router-link-exact-active {
-      color: #42b983;
+    if (theme) 
+    {
+        if (theme == "true") 
+        {
+          this.$vuetify.theme.dark = true;
+        } 
+        else 
+        {
+          this.$vuetify.theme.dark = false;
+        }
     }
   }
-}
-</style>
+};
+</script>
