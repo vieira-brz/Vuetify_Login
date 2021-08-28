@@ -1,6 +1,13 @@
 <template>
     <nav>
-        <v-navigation-drawer v-model="drawer" app mini-variant mini-variant-width="100">
+        <v-navigation-drawer 
+            v-model="drawer" 
+            app 
+            stateless
+            mini-variant 
+            mini-variant-width="100"
+            class="elevation-3"
+        >
             <v-list>
                 <v-list-item class="mb-16" router to="/account">
                     <v-list-item-avatar class="mb-5">
@@ -79,7 +86,32 @@
                     </v-list-item>
                 </v-list>
             </v-list>
-        </v-navigation-drawer>   
+        </v-navigation-drawer>  
+
+        <v-app-bar 
+            app 
+            :class="{
+                'pattern': !$vuetify.theme.dark,
+                'dark_pattern': $vuetify.theme.dark,
+            }"
+            class="elevation-3"
+        >
+            <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+
+            <v-spacer></v-spacer>
+            
+            <v-btn icon>
+                <v-icon>mdi-magnify</v-icon>
+            </v-btn>
+
+            <v-btn icon>
+                <v-icon>mdi-heart</v-icon>
+            </v-btn>
+
+            <v-btn icon>
+                <v-icon>mdi-dots-vertical</v-icon>
+            </v-btn>
+        </v-app-bar>
 
         <CondigDialog v-model="showConfigDialog" />     
         

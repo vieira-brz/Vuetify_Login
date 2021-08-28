@@ -19,18 +19,11 @@
             <v-icon>mdi-close</v-icon>
           </v-btn>
 
-          <v-toolbar-title>Settings</v-toolbar-title>
+          <v-toolbar-title>Configurações</v-toolbar-title>
 
           <v-spacer></v-spacer>
 
           <v-toolbar-items>
-            <v-btn
-              dark
-              text
-              @click.stop="show = false"
-            >
-              Save
-            </v-btn>
           </v-toolbar-items>
         </v-toolbar>
 
@@ -38,19 +31,19 @@
           three-line
           subheader
         >
-          <v-subheader>User Controls</v-subheader>
+          <v-subheader>Definições do sistema</v-subheader>
 
           <v-list-item>
             <v-list-item-content>
-              <v-list-item-title>Content filtering</v-list-item-title>
-              <v-list-item-subtitle>Set the content filtering level to restrict apps that can be downloaded</v-list-item-subtitle>
+              <v-list-item-title>Senha</v-list-item-title>
+              <v-list-item-subtitle>Exige a senha para que qualquer alteração passe por uma confirmação</v-list-item-subtitle>
             </v-list-item-content>
           </v-list-item>
 
           <v-list-item>
             <v-list-item-content>
-              <v-list-item-title>Password</v-list-item-title>
-              <v-list-item-subtitle>Require password for purchase or use password to restrict purchase</v-list-item-subtitle>
+              <v-list-item-title>Filtragem de conteúdo</v-list-item-title>
+              <v-list-item-subtitle>Por padrão será exibido com mais frequência aquilo com o que você mais interage</v-list-item-subtitle>
             </v-list-item-content>
           </v-list-item>
         </v-list>
@@ -61,15 +54,15 @@
           three-line
           subheader
         >
-          <v-subheader>General</v-subheader>
+          <v-subheader>Configurações gerais</v-subheader>
 
           <v-list-item>
             <v-list-item-action>
               <v-checkbox></v-checkbox>
             </v-list-item-action>
             <v-list-item-content>
-              <v-list-item-title>Notifications</v-list-item-title>
-              <v-list-item-subtitle>Notify me about updates to apps or games that I downloaded</v-list-item-subtitle>
+              <v-list-item-title>Notificações</v-list-item-title>
+              <v-list-item-subtitle>Notifique-me sobre atualizações, eventos, promoções e mensagens</v-list-item-subtitle>
             </v-list-item-content>
           </v-list-item>
 
@@ -78,8 +71,8 @@
               <v-checkbox></v-checkbox>
             </v-list-item-action>
             <v-list-item-content>
-              <v-list-item-title>Sound</v-list-item-title>
-              <v-list-item-subtitle>Auto-update apps at any time. Data charges may apply</v-list-item-subtitle>
+              <v-list-item-title>Som</v-list-item-title>
+              <v-list-item-subtitle>Toque um som ao receber uma notificação</v-list-item-subtitle>
             </v-list-item-content>
           </v-list-item>
 
@@ -88,8 +81,18 @@
               <v-checkbox></v-checkbox>
             </v-list-item-action>
             <v-list-item-content>
-              <v-list-item-title>Auto-add widgets</v-list-item-title>
-              <v-list-item-subtitle>Automatically add home screen widgets</v-list-item-subtitle>
+              <v-list-item-title>Edição de informações</v-list-item-title>
+              <v-list-item-subtitle>Restringe um limite de 3 tentativas para alterar os dados da sua conta</v-list-item-subtitle>
+            </v-list-item-content>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-action>
+              <v-checkbox></v-checkbox>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title>Permitir download de arquivos</v-list-item-title>
+              <v-list-item-subtitle>Permite com que você baixe os arquivos compartilhados como fotos, videos, pdf, zip entre outros</v-list-item-subtitle>
             </v-list-item-content>
           </v-list-item>
         </v-list>

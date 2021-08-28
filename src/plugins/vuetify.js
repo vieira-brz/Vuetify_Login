@@ -14,10 +14,12 @@ export default new Vuetify({
         dark: false,
         themes: {
             dark: {
-                dark_background: '#00f',
+                dark_pattern: '#363636',
+                dark_background: '#272727',
             },
             light: {
-                background: '#f00',
+                pattern: '#ffffff',
+                background: '#f1f1f1',
             }
         }
     }
