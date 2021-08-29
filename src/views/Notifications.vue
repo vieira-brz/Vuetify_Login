@@ -1,5 +1,10 @@
 <template>
-    <v-app :style="{background: $vuetify.theme.themes.dark.background}" class="notifications">
+    <v-app class="notifications"
+        :class="{
+            'background': !$vuetify.theme.dark,
+            'dark_background': $vuetify.theme.dark,
+        }"
+    >
         <SideBar />
         NOTIFICATIONS
     </v-app>

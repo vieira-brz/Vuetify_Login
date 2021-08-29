@@ -3,8 +3,8 @@
     :class="{
       'background': !$vuetify.theme.dark,
       'dark_background': $vuetify.theme.dark,
-    }
-  ">
+    }"
+  >
     <SideBar/>
     HOME
   </v-app>

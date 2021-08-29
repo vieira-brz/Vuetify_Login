@@ -1,5 +1,10 @@
 <template>
-    <v-app :style="{background: $vuetify.theme.themes.dark.background}" class="about">
+    <v-app class="about"
+        :class="{
+            'background': !$vuetify.theme.dark,
+            'dark_background': $vuetify.theme.dark,
+        }"
+    >
         <SideBar/>
         ABOUT
     </v-app>

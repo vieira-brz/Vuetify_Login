@@ -1,5 +1,10 @@
 <template>
-  <v-app :style="{background: $vuetify.theme.themes.dark.background}" class="schedule">
+  <v-app class="schedule"     
+    :class="{
+      'background': !$vuetify.theme.dark,
+      'dark_background': $vuetify.theme.dark,
+    }"
+  >
     <SideBar/>
     SCHEDULE
   </v-app>

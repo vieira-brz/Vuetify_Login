@@ -1,7 +1,12 @@
 <template>
     <v-app name="login">
         <v-main>
-            <v-container class="fill-height" fluid>
+            <v-container class="fill-height" fluid 
+                :class="{
+                    'background': !$vuetify.theme.dark,
+                    'dark_background': $vuetify.theme.dark,
+                }"
+            >
                 <v-row align="center" justify="center">
                     <v-col cols="12" sm="8" md="9">
                         <v-card class="elevation-12">
@@ -32,6 +37,7 @@
                                                     prepend-icon="lock"
                                                     counter
                                                     clearable
+                                                    :rules="passwordRule"
                                                     :type="logarPasswordType"
                                                     class="inputPass"
                                                     color="blue lighten-2"
@@ -54,12 +60,12 @@
                                         <v-col cols="12" md="4" class="blue lighten-2">
                                             <v-card-text class="white--text mt-12">
                                                 <h1 class="text-center display-1">Olá!</h1>
-                                                <h3 class="text-center mt-3 mb-3">Cadastre e desfrute de todas as funcionalidades do WebDev</h3>
+                                                <h3 class="text-center mt-3 mb-3">Cadastre-se e desfrute de todas as funcionalidades do nosso site</h3>
                                             </v-card-text>
                                             <div class="text-center mb-4">
                                                 <v-btn rounded outlined dark @click="step++">CADASTRAR-SE</v-btn>
                                             </div>
-                                            <v-img class="mt-10 mb-5 ml-5 mr-5" src="../assets/login.svg"></v-img>
+                                            <v-img class="mt-10 mb-5 mx-5" src="../assets/login.svg"></v-img>
                                         </v-col>
                                     </v-row>
                                 </v-window-item>
@@ -69,12 +75,12 @@
                                         <v-col cols="12" md="4" class="blue lighten-2">
                                             <v-card-text class="white--text mt-12">
                                                 <h1 class="text-center display-1">Bem-vindo!</h1>
-                                                <h3 class="text-center mt-3 mb-3">Possua diversos recursos como: agenda, controle financeiro, backup de arquivos e mais!</h3>
+                                                <h3 class="text-center mt-3 mb-3">Caso possua uma conta já existente, clique no botão abaixo para entrar</h3>
                                             </v-card-text>
                                             <div class="text-center mb-4">
                                                 <v-btn rounded outlined dark @click="step--">ENTRAR</v-btn>
                                             </div>
-                                            <v-img class="mt-10 mb-5 ml-5 mr-5" src="../assets/cadastro.svg"></v-img>
+                                            <v-img class="mt-10 mb-5 mx-5" src="../assets/cadastro.svg"></v-img>
                                         </v-col>
 
                                         <v-col cols="12" md="8">
@@ -116,7 +122,7 @@
                                                     ></v-checkbox>
                                                 </div>
                                             </v-card-text>
-                                            <v-row class="text-center mb-6 pl-7 pr-7">
+                                            <v-row class="text-center mb-16 pl-7 pr-7">
                                                 <v-btn block color="blue lighten-2" dark router to="/home">CADASTRAR</v-btn>
                                             </v-row>
                                         </v-col>

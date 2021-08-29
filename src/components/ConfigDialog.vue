@@ -115,7 +115,7 @@
             </v-list-item-action>
             <v-list-item-content>
               <v-list-item-title>{{ themeText }}</v-list-item-title>
-              <v-list-item-subtitle>Automatically add home screen widgets</v-list-item-subtitle>
+              <v-list-item-subtitle>Alterne entre o modo claro e modo escuro</v-list-item-subtitle>
             </v-list-item-content>
           </v-list-item>
         </v-list>

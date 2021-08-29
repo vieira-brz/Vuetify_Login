@@ -1,5 +1,10 @@
 <template>
-  <v-app :style="{background: $vuetify.theme.themes.dark.background}" class="chat">
+  <v-app class="chat"
+        :class="{
+      'background': !$vuetify.theme.dark,
+      'dark_background': $vuetify.theme.dark,
+    }"
+  >
     <SideBar/>
     CHAT
   </v-app>
